@@ -52,16 +52,23 @@ For this part we wanted to analyse firstly everything by month with barplots, th
 
 #### Modeling 
 
-The first thing to do is a correlation matrix (heatmap) to see which variables have the higher correlation with our target revenue.
+The first thing to do is a correlation matrix (heatmap) to see which variables have the higher correlation with our target revenue. Indeed, it was essential to determine the colomnes with the most correlation because if we take the whole dataset our accuracy decreases.
+
 We choose to take the 7 higher values : "Administrative","Administrative_Duration","Informational","Informational_Duration","ProductRelated","ProductRelated_Duration" and "PageValues".
 
 We will only keep thoses columns for the modeling. 
 
-Then, we split the dataset into a train and test sets
+Then, we split the dataset into a train and test sets, in order to improve our accuracy we also play on the rate of test variables. We tested with a proportion of 25% however our accurancy was lower so we took a rate at 20% and our accurancy was almost 0.90.
+
+Our target has returned it is a Boolean variable therefore we must use classification models.
 
 We try some models : Support Vector Machine, Naive Bayes, Random Forest Classification, K Nearest Neighbour, Logisitic Regression, Decision Tree Classification, Gradient Boosting Classification, Linear Discriminant Analysis
 
 We calculate the accurancy, the classification report and the confusion matrix for each models.
 
-Then, we do a grid search, we compare the results of ours models and we saw that the best one is the random forest. 
+Then, we do a grid search, indeed, it allows us to know which parameters are used and then determine the best parameters for each model to determine the best precision.
+
+We compare the results of ours models and we saw that the best one is the Gradient Boosting Classification.
+
+To conclude the best way to predict our target and whether our revenue will be a true or a false and therefore whether the user will buy or not.
 
