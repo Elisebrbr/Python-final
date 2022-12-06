@@ -68,7 +68,7 @@ We calculate the accurancy, the classification report and the confusion matrix f
 
 Then, we do a grid search, indeed, it allows us to know which parameters are used and then determine the best parameters for each model to determine the best precision.
 
-We compare the results of ours models and we saw that the best one is the Gradient Boosting Classification.
+We compare the results of ours models and we saw that the best one is the Random Forest Classification.
 
 To conclude the best way to predict our target and whether our revenue will be a true or a false and therefore whether the user will buy or not.
 
